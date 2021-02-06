@@ -96,9 +96,9 @@ sample_data_file <- function() {
             #rm de_DE.twitter.txt;
             #cd ..;
             cd ./en_US;
-            gshuf -n 3000 en_US.blogs.txt > en_US.blogs.sample.txt;
-            gshuf -n 3000 en_US.news.txt > en_US.news.sample.txt;
-            gshuf -n 3000 en_US.twitter.txt > en_US.twitter.sample.txt;
+            gshuf -n 2500 en_US.blogs.txt > en_US.blogs.sample.txt;
+            gshuf -n 2500 en_US.news.txt > en_US.news.sample.txt;
+            gshuf -n 2500 en_US.twitter.txt > en_US.twitter.sample.txt;
             rm en_US.blogs.txt;
             rm en_US.news.txt;
             rm en_US.twitter.txt;

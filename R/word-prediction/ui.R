@@ -11,7 +11,7 @@ shinyUI(
                       user with possible completions to the current word being
                       typed or probable words that could follow the current word
                       or phrase after it is typed. The package
-                      \"wordprediction\" provides predictions based on entire words and phrases. Good example include Happy or Happy New or Merry. Which quickly result in common phrases."),
+                      \"wordprediction\" provides predictions based on entire words and phrases. Good examples include Happy or Happy New or Merry, all of which quickly result in accurate prediction of common phrases."),
             fixedRow(
                 sidebarPanel(
                     span(
