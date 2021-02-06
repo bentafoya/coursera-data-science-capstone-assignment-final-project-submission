@@ -87,38 +87,38 @@ sample_data_file <- function() {
 
         system(
             "
-            cd ./final/de_DE;
-            gshuf -n 1000 de_DE.blogs.txt > de_DE.blogs.sample.txt;
-            gshuf -n 1000 de_DE.news.txt > de_DE.news.sample.txt;
-            gshuf -n 1000 de_DE.twitter.txt > de_DE.twitter.sample.txt;
-            rm de_DE.blogs.txt;
-            rm de_DE.news.txt;
-            rm de_DE.twitter.txt;
-            cd ..;
+            #cd ./final/de_DE;
+            #gshuf -n 1000 de_DE.blogs.txt > de_DE.blogs.sample.txt;
+            #gshuf -n 1000 de_DE.news.txt > de_DE.news.sample.txt;
+            #gshuf -n 1000 de_DE.twitter.txt > de_DE.twitter.sample.txt;
+            #rm de_DE.blogs.txt;
+            #rm de_DE.news.txt;
+            #rm de_DE.twitter.txt;
+            #cd ..;
             cd ./en_US;
-            gshuf -n 2000 en_US.blogs.txt > en_US.blogs.sample.txt;
-            gshuf -n 2000 en_US.news.txt > en_US.news.sample.txt;
-            gshuf -n 2000 en_US.twitter.txt > en_US.twitter.sample.txt;
+            gshuf -n 3000 en_US.blogs.txt > en_US.blogs.sample.txt;
+            gshuf -n 3000 en_US.news.txt > en_US.news.sample.txt;
+            gshuf -n 3000 en_US.twitter.txt > en_US.twitter.sample.txt;
             rm en_US.blogs.txt;
             rm en_US.news.txt;
             rm en_US.twitter.txt;
             cd ..;
-            cd ./fi_FI;
-            gshuf -n 1000 fi_FI.blogs.txt > fi_FI.blogs.sample.txt;
-            gshuf -n 1000 fi_FI.news.txt > fi_FI.news.sample.txt;
-            gshuf -n 1000 fi_FI.twitter.txt > fi_FI.twitter.sample.txt;
-            rm fi_FI.blogs.txt;
-            rm fi_FI.news.txt;
-            rm fi_FI.twitter.txt;
-            cd ..;
-            cd ./ru_RU;
-            gshuf -n 1000 ru_RU.blogs.txt > ru_RU.blogs.sample.txt;
-            gshuf -n 1000 ru_RU.news.txt > ru_RU.news.sample.txt;
-            gshuf -n 1000 ru_RU.twitter.txt > ru_RU.twitter.sample.txt;
-            rm ru_RU.blogs.txt;
-            rm ru_RU.news.txt;
-            rm ru_RU.twitter.txt;
-            cd ..; cd ..;
+            #cd ./fi_FI;
+            #gshuf -n 1000 fi_FI.blogs.txt > fi_FI.blogs.sample.txt;
+            #gshuf -n 1000 fi_FI.news.txt > fi_FI.news.sample.txt;
+            #gshuf -n 1000 fi_FI.twitter.txt > fi_FI.twitter.sample.txt;
+            #rm fi_FI.blogs.txt;
+            #rm fi_FI.news.txt;
+            #rm fi_FI.twitter.txt;
+            #cd ..;
+            #cd ./ru_RU;
+            #gshuf -n 1000 ru_RU.blogs.txt > ru_RU.blogs.sample.txt;
+            #gshuf -n 1000 ru_RU.news.txt > ru_RU.news.sample.txt;
+            #gshuf -n 1000 ru_RU.twitter.txt > ru_RU.twitter.sample.txt;
+            #rm ru_RU.blogs.txt;
+            #rm ru_RU.news.txt;
+            #rm ru_RU.twitter.txt;
+            #cd ..; cd ..;
             "
         )
 
@@ -135,7 +135,7 @@ sample_data_file <- function() {
 #' a character giving the language as IETF language tags "de" for German, "en"
 #' for English, "fi" for Finnish, or "ru" for Russian.
 #' @return corpus a volatile text corpus as a "tm" package object
-#' @author Jonathan Tieh
+#' @author Ben
 #' @details
 #' This function reads from a data file as an object of type "corpus" from the
 #' "tm" ppackage. It chooses the files corresponding to the language indicated
@@ -202,7 +202,7 @@ read_data <- function(language) {
 #'
 #' @param corpus a volatile text corpus as a "tm" package object
 #' @return a preprocessed volatile text corpus as a "tm" package object
-#' @author Jonathan Tieh
+#' @author Ben
 #' @details
 #' This function preprocesses a corpus by removing punctuation, numbers, and
 #' English stopwords, and stripping whitespace.
@@ -250,7 +250,7 @@ preprocess_corpus <- function(corpus) {
 #' @param corpus corpus to be tokenized
 #' @param n size of n-gram
 #' @return a n-gram-tokenized term-document matrix
-#' @author Jonathan Tieh
+#' @author Ben
 #' @details
 #' This function creates a n-gram-tokenized term-document matrix.
 #' @export

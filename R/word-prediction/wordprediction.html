@@ -458,38 +458,38 @@ sample_data_file &lt;- function() {
 
         system(
             &quot;
-            cd ./final/de_DE;
-            gshuf -n 1000 de_DE.blogs.txt &gt; de_DE.blogs.sample.txt;
-            gshuf -n 1000 de_DE.news.txt &gt; de_DE.news.sample.txt;
-            gshuf -n 1000 de_DE.twitter.txt &gt; de_DE.twitter.sample.txt;
-            rm de_DE.blogs.txt;
-            rm de_DE.news.txt;
-            rm de_DE.twitter.txt;
-            cd ..;
+            #cd ./final/de_DE;
+            #gshuf -n 1000 de_DE.blogs.txt &gt; de_DE.blogs.sample.txt;
+            #gshuf -n 1000 de_DE.news.txt &gt; de_DE.news.sample.txt;
+            #gshuf -n 1000 de_DE.twitter.txt &gt; de_DE.twitter.sample.txt;
+            #rm de_DE.blogs.txt;
+            #rm de_DE.news.txt;
+            #rm de_DE.twitter.txt;
+            #cd ..;
             cd ./en_US;
-            gshuf -n 2000 en_US.blogs.txt &gt; en_US.blogs.sample.txt;
-            gshuf -n 2000 en_US.news.txt &gt; en_US.news.sample.txt;
-            gshuf -n 2000 en_US.twitter.txt &gt; en_US.twitter.sample.txt;
+            gshuf -n 3000 en_US.blogs.txt &gt; en_US.blogs.sample.txt;
+            gshuf -n 3000 en_US.news.txt &gt; en_US.news.sample.txt;
+            gshuf -n 3000 en_US.twitter.txt &gt; en_US.twitter.sample.txt;
             rm en_US.blogs.txt;
             rm en_US.news.txt;
             rm en_US.twitter.txt;
             cd ..;
-            cd ./fi_FI;
-            gshuf -n 1000 fi_FI.blogs.txt &gt; fi_FI.blogs.sample.txt;
-            gshuf -n 1000 fi_FI.news.txt &gt; fi_FI.news.sample.txt;
-            gshuf -n 1000 fi_FI.twitter.txt &gt; fi_FI.twitter.sample.txt;
-            rm fi_FI.blogs.txt;
-            rm fi_FI.news.txt;
-            rm fi_FI.twitter.txt;
-            cd ..;
-            cd ./ru_RU;
-            gshuf -n 1000 ru_RU.blogs.txt &gt; ru_RU.blogs.sample.txt;
-            gshuf -n 1000 ru_RU.news.txt &gt; ru_RU.news.sample.txt;
-            gshuf -n 1000 ru_RU.twitter.txt &gt; ru_RU.twitter.sample.txt;
-            rm ru_RU.blogs.txt;
-            rm ru_RU.news.txt;
-            rm ru_RU.twitter.txt;
-            cd ..; cd ..;
+            #cd ./fi_FI;
+            #gshuf -n 1000 fi_FI.blogs.txt &gt; fi_FI.blogs.sample.txt;
+            #gshuf -n 1000 fi_FI.news.txt &gt; fi_FI.news.sample.txt;
+            #gshuf -n 1000 fi_FI.twitter.txt &gt; fi_FI.twitter.sample.txt;
+            #rm fi_FI.blogs.txt;
+            #rm fi_FI.news.txt;
+            #rm fi_FI.twitter.txt;
+            #cd ..;
+            #cd ./ru_RU;
+            #gshuf -n 1000 ru_RU.blogs.txt &gt; ru_RU.blogs.sample.txt;
+            #gshuf -n 1000 ru_RU.news.txt &gt; ru_RU.news.sample.txt;
+            #gshuf -n 1000 ru_RU.twitter.txt &gt; ru_RU.twitter.sample.txt;
+            #rm ru_RU.blogs.txt;
+            #rm ru_RU.news.txt;
+            #rm ru_RU.twitter.txt;
+            #cd ..; cd ..;
             &quot;
         )
 
@@ -506,7 +506,7 @@ sample_data_file &lt;- function() {
 #&#39; a character giving the language as IETF language tags &quot;de&quot; for German, &quot;en&quot;
 #&#39; for English, &quot;fi&quot; for Finnish, or &quot;ru&quot; for Russian.
 #&#39; @return corpus a volatile text corpus as a &quot;tm&quot; package object
-#&#39; @author Jonathan Tieh
+#&#39; @author Ben
 #&#39; @details
 #&#39; This function reads from a data file as an object of type &quot;corpus&quot; from the
 #&#39; &quot;tm&quot; ppackage. It chooses the files corresponding to the language indicated
@@ -573,7 +573,7 @@ read_data &lt;- function(language) {
 #&#39;
 #&#39; @param corpus a volatile text corpus as a &quot;tm&quot; package object
 #&#39; @return a preprocessed volatile text corpus as a &quot;tm&quot; package object
-#&#39; @author Jonathan Tieh
+#&#39; @author Ben
 #&#39; @details
 #&#39; This function preprocesses a corpus by removing punctuation, numbers, and
 #&#39; English stopwords, and stripping whitespace.
@@ -621,7 +621,7 @@ preprocess_corpus &lt;- function(corpus) {
 #&#39; @param corpus corpus to be tokenized
 #&#39; @param n size of n-gram
 #&#39; @return a n-gram-tokenized term-document matrix
-#&#39; @author Jonathan Tieh
+#&#39; @author Ben
 #&#39; @details
 #&#39; This function creates a n-gram-tokenized term-document matrix.
 #&#39; @export
