@@ -234,8 +234,8 @@ preprocess_corpus <- function(corpus) {
     # corpus_preprocessed <- tm_map(corpus_preprocessed, stemDocument)
 
     # Remove stopwords.
-    corpus_preprocessed <-
-        tm_map(corpus_preprocessed, removeWords, stopwords("en"))
+    #corpus_preprocessed <-
+        #tm_map(corpus_preprocessed, removeWords, stopwords("en"))
 
     # Return value.
     return(corpus_preprocessed)
