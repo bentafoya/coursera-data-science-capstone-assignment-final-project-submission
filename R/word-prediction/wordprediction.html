@@ -467,9 +467,9 @@ sample_data_file &lt;- function() {
             #rm de_DE.twitter.txt;
             #cd ..;
             cd ./en_US;
-            gshuf -n 3000 en_US.blogs.txt &gt; en_US.blogs.sample.txt;
-            gshuf -n 3000 en_US.news.txt &gt; en_US.news.sample.txt;
-            gshuf -n 3000 en_US.twitter.txt &gt; en_US.twitter.sample.txt;
+            gshuf -n 2500 en_US.blogs.txt &gt; en_US.blogs.sample.txt;
+            gshuf -n 2500 en_US.news.txt &gt; en_US.news.sample.txt;
+            gshuf -n 2500 en_US.twitter.txt &gt; en_US.twitter.sample.txt;
             rm en_US.blogs.txt;
             rm en_US.news.txt;
             rm en_US.twitter.txt;
@@ -605,8 +605,8 @@ preprocess_corpus &lt;- function(corpus) {
     # corpus_preprocessed &lt;- tm_map(corpus_preprocessed, stemDocument)
 
     # Remove stopwords.
-    corpus_preprocessed &lt;-
-        tm_map(corpus_preprocessed, removeWords, stopwords(&quot;en&quot;))
+    #corpus_preprocessed &lt;-
+        #tm_map(corpus_preprocessed, removeWords, stopwords(&quot;en&quot;))
 
     # Return value.
     return(corpus_preprocessed)
